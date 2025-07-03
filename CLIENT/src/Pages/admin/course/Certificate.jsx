@@ -8,14 +8,14 @@ const Certificate = ({ userId, courseId, userName, courseName }) => {
     const generateCertificate = async () => {
         setLoading(true);
         try {
-            const response = await axios.post("http://localhost:8080/api/v1/certificate/generate", {
+            const response = await axios.post("https://lms-deployed-npsx.onrender.com/api/v1/certificate/generate", {
                 userId,
                 courseId,
                 userName,
                 courseName,
             }, { withCredentials: true });
 
-            setCertificateUrl(`http://localhost:8080${response.data.certificateUrl}`);
+            setCertificateUrl(`https://lms-deployed-npsx.onrender.com${response.data.certificateUrl}`);
         } catch (error) {
             console.error("Error generating certificate:", error);
         } finally {
