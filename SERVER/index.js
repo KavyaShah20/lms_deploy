@@ -26,7 +26,7 @@ app.use(cookieParser());
 // Fixed CORS configuration
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://lms-deploy-q13c.vercel.app", // Add your frontend URL here
+  "https://client.vercel.app", // Add your frontend URL here
   process.env.FRONTEND_URL
 ].filter(Boolean); // Remove any undefined values
 
