@@ -59,10 +59,9 @@ const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://lms-deploy-te62.vercel.app',
-  credentials: true
+    origin: "http://localhost:5173",
+    credentials: true
 }));
-
 
 
 // API's 

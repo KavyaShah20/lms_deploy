@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import { Dice3 } from "lucide-react";
 import { userLoggedIn, userLoggedOut } from "../authSlice";
+const BASE_URL = import.meta.env.VITE_BASE_URL ;
 
-const USER_API = "https://lms-deployed-npsx.onrender.com/api/v1/user/";
+const USER_API = `${BASE_URL}/api/v1/user/`;
 
 export const authApi = createApi({
     reducerPath: "authApi",

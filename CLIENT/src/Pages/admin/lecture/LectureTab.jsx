@@ -10,9 +10,8 @@ import { toast } from 'sonner'
 import { useEditLectureMutation, useGetLectureByIdQuery, useRemoveLectureMutation } from '@/features/api/courseApi'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
-
-const MEDIA_API = 'https://lms-deployed-npsx.onrender.com/api/v1/media';
-
+const BASE_URL = import.meta.env.VITE_BASE_URL; 
+const MEDIA_API = `${BASE_URL}/api/v1/media`;
 const LectureTab = () => {
     const [lectureTitle, setLectureTitle] = useState('');
     const [uploadVideoInfo, setUploadVideoInfo] = useState(null);
